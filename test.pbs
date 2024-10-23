@@ -1,0 +1,14 @@
+#!//bin/bash
+#PBS -A SCSG0001
+#PBS -l select=1:ncpus=64:mpiprocs=4:ngpus=4
+#PBS -q main
+#PBS -l walltime=00:30:00
+
+#------------------------------------------------------------------
+# common config
+topdir=$(git rev-parse --show-toplevel)
+source ${topdir}/config_env.sh
+#------------------------------------------------------------------
+
+cd ${builddir} || exit 1
+ctest
