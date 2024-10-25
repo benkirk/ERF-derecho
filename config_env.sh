@@ -13,7 +13,5 @@ module list
 export ERF_HOME=$(pwd)/ERF
 export AMREX_HOME=${ERF_HOME}/Submodules/AMReX
 
-[ -d ${ERF_HOME} ] || git clone --recursive https://github.com/erf-model/ERF.git ${ERF_HOME}
-
 instdir=${ERF_HOME}/${NCAR_BUILD_ENV}
 builddir=${instdir}/BUILD

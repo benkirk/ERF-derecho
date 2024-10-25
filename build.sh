@@ -8,6 +8,8 @@ topdir=$(git rev-parse --show-toplevel)
 source ${topdir}/config_env.sh
 #------------------------------------------------------------------
 
+[ -d ${ERF_HOME} ] || git clone --recursive https://github.com/erf-model/ERF.git ${ERF_HOME}
+
 mkdir -p ${builddir} && cd ${builddir} && pwd
 
 #------------------------------------------------------------------
