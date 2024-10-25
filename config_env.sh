@@ -10,8 +10,8 @@ module list
 
 #------------------------------------------------------------------
 # paths
-export ERF_HOME=$(pwd)/ERF
+topdir="${topdir:-$(git rev-parse --show-toplevel)}"
+export ERF_HOME=${topdir}/ERF
 export AMREX_HOME=${ERF_HOME}/Submodules/AMReX
-
 instdir=${ERF_HOME}/${NCAR_BUILD_ENV}
 builddir=${instdir}/BUILD

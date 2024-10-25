@@ -2,6 +2,8 @@
 
 ## Quickstart
 ```pre
+git clone https://github.com/benkirk/ERF-derecho.git
+cd ERF-derecho
 ./build.sh
 cd cases/ABL
 PBS_ACCOUNT=<my_account> make run
